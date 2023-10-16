@@ -28,9 +28,9 @@ jobs:
            with:
                inso-version: 3.5.0
                wrapper: true
-         - run: inso --version
-            id: inso_version
-         - run: echo '${{ toJson(steps.inso_version.outputs) }}'
+       - run: inso --version
+          id: inso_version
+       - run: echo '${{ toJson(steps.inso_version.outputs) }}'
           
       # Runs a single command using the runners shell
       - name: Run a one-line script
